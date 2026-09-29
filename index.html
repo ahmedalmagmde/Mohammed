@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>الشاعر محمد آل وافي</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Tajawal:wght@300;400;500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#fafafa;--muted:#a7a6a6;--nav:#b6b5b5;--strip:#8b8a8a;--pill:#fff;--pill-ink:#050505;
+--u:calc(100vh/1058);--uw:calc(100vw/1487);
+--h:clamp(var(--u),calc(var(--u)*.65 + var(--uw)*.35),calc(var(--u)*1.16));
+box-sizing:border-box;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);-webkit-tap-highlight-color:transparent}
+@supports(height:100dvh){:root{--u:calc(100dvh/1058)}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden;background:#050505;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:'Manrope','Tajawal',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+a{text-decoration:none;color:inherit}
+.stage{position:relative;height:100%;width:100%;overflow:hidden;background:#050505}
+.plate{position:absolute;inset:0}
+.plate-video{position:absolute;left:50%;top:calc(1*var(--u));width:calc(1492*var(--u));height:calc(1054*var(--u));transform:translateX(calc(-50% - .5*var(--u))) scaleX(-1);object-fit:cover;pointer-events:none}
+.plate::after{content:"";position:absolute;inset:0;background:
+linear-gradient(to bottom,rgba(5,5,5,0) 78.8%,rgba(5,5,5,.23) 79.6%,rgba(5,5,5,.45) 81.4%,rgba(5,5,5,.75) 83.3%,rgba(5,5,5,.84) 85.2%,rgba(5,5,5,.888) 88%,rgba(5,5,5,.905) 91%,rgba(5,5,5,.96) 95%,#050505 100%),
+linear-gradient(to right,#050505 calc(50% - 746*var(--u)),transparent calc(50% - 676*var(--u)),transparent calc(50% + 676*var(--u)),#050505 calc(50% + 746*var(--u)))}
+.topbar>*,.hero>*,.logos{position:absolute}
+.brand{right:calc(75*var(--u));top:calc(27*var(--u));width:calc(31.5*var(--u));height:calc(48.5*var(--u))}
+.brand svg{width:100%;height:100%;display:block}
+.links{left:50%;top:calc(51*var(--u));transform:translate(-50%,-50%);display:flex;gap:calc(24.5*var(--u));font-size:calc(19*var(--u));color:var(--nav);white-space:nowrap}
+.links a:hover{color:#fff}
+.pill{display:inline-flex;align-items:center;justify-content:center;background:var(--pill);color:var(--pill-ink);border-radius:999px;font-weight:500}
+.pill span{transform:translateY(calc(1*var(--u)))}
+.pill-nav{left:calc(75.4*var(--u));top:calc(27*var(--u));width:calc(175*var(--u));height:calc(49*var(--u));font-size:calc(20.6*var(--u))}
+.burger{display:none}
+.headline{right:calc(75.5*var(--u));top:calc(230.5*var(--u));margin:0;font-family:'Amiri','Tajawal',serif;font-size:calc(71.6*var(--h));line-height:calc(80.5*var(--h));font-weight:400;letter-spacing:0;white-space:nowrap}
+.headline span,.sub span{display:block}
+.sub{right:calc(75.5*var(--u));top:calc(230.5*var(--u) + 189*var(--h));margin:0;font:400 calc(20.7*var(--h))/calc(30*var(--h)) 'Tajawal',sans-serif;color:var(--muted);white-space:nowrap}
+.pill-cta{right:calc(74.9*var(--u));top:calc(230.5*var(--u) + 274*var(--h));width:calc(175.6*var(--h));height:calc(50*var(--h));font-size:calc(20.6*var(--h))}
+.ghost{right:calc(74.9*var(--u) + 200*var(--h));top:calc(230.5*var(--u) + 289*var(--h));font-size:calc(20.6*var(--h));font-weight:500;color:#fff}
+.logos{width:calc(741*var(--u));left:50%;top:0;height:100%;transform:translateX(-50%);color:var(--strip);pointer-events:none}
+.lg{position:absolute;top:calc(998*var(--u));font:700 calc(19*var(--u))/1 'Amiri','Tajawal',serif;white-space:nowrap;pointer-events:auto;display:flex;align-items:center;gap:calc(10*var(--u))}
+.lg i{width:calc(9*var(--u));height:calc(9*var(--u));border:1.5px solid currentColor;border-radius:50%;display:block}
+.lg:hover{color:#fff}
+.lg1{right:0}.lg2{right:calc(190*var(--u))}.lg3{right:calc(390*var(--u))}.lg4{right:calc(560*var(--u))}
+.menu{position:absolute;inset:0;z-index:5;background:linear-gradient(rgba(5,5,5,.94),rgba(5,5,5,.98));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;visibility:hidden;transition:opacity .42s,visibility .42s;overflow-y:auto}
+.is-open .menu{opacity:1;visibility:visible}
+.menu-inner{max-width:720px;margin:0 auto;padding:calc(110*var(--u)) 24px 60px}
+.menu-eyebrow{color:var(--muted);font-size:14px;letter-spacing:.2em;margin:0 0 12px}
+.menu-list{list-style:none;margin:0;padding:0}
+.menu-list li{opacity:0;transform:translateY(14px);transition:.5s cubic-bezier(.22,1,.36,1)}
+.is-open .menu-list li{opacity:1;transform:none}
+.menu-list a{display:flex;justify-content:space-between;gap:16px;padding:14px 4px;border-bottom:1px solid rgba(255,255,255,.1);font-family:'Amiri',serif;font-size:clamp(22px,2.2vw,30px);color:var(--ink)}
+.menu-list a:hover{color:#fff;padding-inline-start:12px}
+.menu-list em{font:400 13px 'Manrope',sans-serif;color:var(--muted);direction:ltr;align-self:center}
+.close{position:fixed;top:calc(30*var(--u));left:calc(75*var(--u));z-index:6;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:22px;cursor:pointer;display:none}
+.is-open .close,.is-poem .close{display:block}
+.panel{position:absolute;inset:0;z-index:5;background:linear-gradient(rgba(5,5,5,.94),rgba(5,5,5,.98));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);opacity:0;visibility:hidden;transition:opacity .42s,visibility .42s;overflow-y:auto}
+.is-poem .panel{opacity:1;visibility:visible}
+.panel .menu-inner{text-align:center}
+.pm-month{color:var(--muted);font-size:14px;letter-spacing:.2em;margin:0 0 10px}
+.pm-title{font-family:'Amiri','Tajawal',serif;font-weight:400;font-size:clamp(34px,4vw,52px);margin:0 0 34px}
+.pm-body{font-family:'Amiri','Tajawal',serif}
+.pm-st{font-size:clamp(18px,1.4vw + 12px,27px);line-height:2.1;color:var(--ink)}
+.pm-st span{display:block;text-wrap:balance}
+.pm-st+.pm-st{margin-top:26px}
+.pm-st+.pm-st::before{content:"";display:block;width:54px;height:1px;background:rgba(255,255,255,.28);margin:0 auto 26px}
+.pm-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:44px}
+.pm-btn{font:500 13px 'Tajawal',sans-serif;color:var(--muted);background:transparent;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:10px 20px;min-height:40px;cursor:pointer}
+.pm-btn:hover{color:#fff;border-color:#fff}.pm-btn[disabled]{opacity:.3;pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+@keyframes rise{from{opacity:0;transform:translateY(calc(14*var(--u)))}}
+@keyframes riseNav{from{opacity:0;transform:translate(-50%,calc(-50% + 14*var(--u)))}to{opacity:1;transform:translate(-50%,-50%)}}
+@keyframes fade{from{opacity:0}}
+.brand,.pill-nav{animation:rise .8s cubic-bezier(.22,1,.36,1) both}
+.links{animation:riseNav .8s cubic-bezier(.22,1,.36,1) both}
+.headline{animation:rise .9s .06s cubic-bezier(.22,1,.36,1) both}
+.sub{animation:rise .9s .14s cubic-bezier(.22,1,.36,1) both}
+.pill-cta,.ghost{animation:rise .9s .22s cubic-bezier(.22,1,.36,1) both}
+.lg{animation:fade 1.1s .34s ease both}}
+@media(max-aspect-ratio:11/10),(max-height:560px){
+:root{--m:min(100vw/430,1.34px);--u:var(--m);--h:var(--m)}
+html,body{overflow:auto}
+.stage{min-height:100dvh;height:auto;display:flex;flex-direction:column;padding:calc(24*var(--m)) calc(24*var(--m)) calc(32*var(--m))}
+.plate{position:fixed}
+.plate-video{inset:0;left:0;top:0;width:100%;height:100%;transform:scaleX(-1);object-position:57% center}
+.plate::after{background:linear-gradient(to left,rgba(5,5,5,.86),rgba(5,5,5,.66) 42%,rgba(5,5,5,.2) 78%,rgba(5,5,5,.1)),linear-gradient(to bottom,rgba(5,5,5,.72),rgba(5,5,5,.34) 24%,rgba(5,5,5,.34) 56%,rgba(5,5,5,.8) 82%,rgba(5,5,5,.97) 94%,#050505)}
+.topbar,.hero,.logos{position:relative;z-index:1}
+.topbar{display:flex;justify-content:space-between;align-items:center}
+.topbar>*,.hero>*,.logos,.lg{position:static}
+.brand{width:calc(31.5*var(--m));height:calc(48.5*var(--m))}
+.links,.pill-nav{display:none}
+.burger{margin-inline-start:auto;display:flex;flex-direction:column;gap:6px;justify-content:center;width:46px;height:46px;padding:0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);cursor:pointer}
+.burger i{display:block;height:2px;background:#fff;border-radius:2px}
+.hero{margin-top:auto;padding-top:calc(160*var(--m));display:flex;flex-direction:column;align-items:flex-start;gap:calc(20*var(--m))}
+.headline{font-size:calc(52*var(--m));line-height:1.3;white-space:normal}
+.sub{font-size:calc(17*var(--m));line-height:1.8;white-space:normal}
+.sub span{display:inline}
+.pill-cta{width:calc(176*var(--m));height:calc(50*var(--m));font-size:calc(19*var(--m));margin-top:calc(8*var(--m))}
+.ghost{font-size:calc(19*var(--m))}
+.logos{width:100%;height:auto;left:auto;transform:none;margin-top:calc(48*var(--m));display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lg{font-size:calc(19*var(--m))}
+.close{left:calc(24px + env(safe-area-inset-left,0px));top:calc(24px + env(safe-area-inset-top,0px))}
+.menu,.panel{position:fixed}
+.menu-inner{padding-top:calc(100px + env(safe-area-inset-top,0px))}
+body:has(.is-open),body:has(.is-poem){overflow:hidden}
+}
+@media(min-width:600px) and (max-aspect-ratio:11/10){:root{--m:min(100vw/860,100vh/760,1.25px)}.logos{grid-template-columns:repeat(4,1fr)}}
+@media(max-height:560px) and (min-aspect-ratio:11/10){:root{--m:1px}.logos{grid-template-columns:repeat(4,1fr)}.hero{padding-top:calc(90*var(--m))}}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="plate">
+    <video class="plate-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <header class="topbar">
+    <nav class="links" aria-label="Primary">
+      <a href="#" data-poem>قصيدة الشهر</a>
+      <a href="#" data-open>قصائده</a>
+      <a href="https://www.alsh3r.com/poets/view/3559" target="_blank" rel="noopener">الصفحة الكاملة</a>
+      <a href="https://www.alsh3r.com/album/view/265" target="_blank" rel="noopener">الصور</a>
+      <a href="https://twitter.com/almalek2010" target="_blank" rel="noopener">تويتر</a>
+    </nav>
+    <a class="pill pill-nav" href="#" data-open><span>قصائده</span></a>
+    <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <button class="close" id="close" aria-label="إغلاق">×</button>
+
+  <nav class="menu" id="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <p class="menu-eyebrow">من قصائده</p>
+      <ul class="menu-list" id="poems"></ul>
+    </div>
+  </nav>
+
+  <section class="panel" id="panel" aria-hidden="true" lang="ar">
+    <div class="menu-inner">
+      <p class="pm-month" id="pmMonth"></p>
+      <h2 class="pm-title" id="pmTitle"></h2>
+      <div class="pm-body" id="pmBody"></div>
+      <div class="pm-nav"><button class="pm-btn" id="pmNew">‹ الأحدث</button><button class="pm-btn" id="pmAll">كل القصائد</button><button class="pm-btn" id="pmOld">الأقدم ›</button></div>
+    </div>
+  </section>
+
+  <main class="hero">
+    <h1 class="headline"><span>الشاعر</span> <span>محمد آل وافي</span></h1>
+    <p class="sub"><span>أكتب لمجرد الخروج عن النص، إثبات الوجود بالفعل لا بالقول،</span> <span>أحاول تجميل يومي لأعيش حاضري.</span></p>
+    <a class="pill pill-cta" href="#" data-open><span>اقرأ قصائده</span></a>
+    <a class="ghost" href="https://www.alsh3r.com/poets/view/3559" target="_blank" rel="noopener">الصفحة الكاملة</a>
+  </main>
+
+  <div class="logos" id="strip"></div>
+</div>
+
+<script>
+/* كل القصائد — الأحدث أولاً. لإضافة قصيدة جديدة: أضف عنصراً في أول القائمة.
+   t = العنوان ، d = التاريخ ، x = الأبيات (سطر فارغ بين كل بيت وآخر)
+   m = "سنة-شهر" اختياري: أحدث قصيدة فيها m تظهر في "قصيدة الشهر". */
+const POEMS=[
+{t:"صبري الكذّاب",d:"29/03/18",m:"2026-09",x:`شحيحين الوصل كيف الجفا خلّاب
+أمانتكم من اللي ما اشتكى ضرّه
+
+تهاديكم غرور و طبعكم لعّاب
+تسامحكم متاع عيادة الكرّه
+
+طفى القنديل ! يا حضرة جشع حطّاب
+صدور البائسين استيبست غِرّه
+
+ولا عاد الأمل في نظرتي جذّاب
+وحيد و حزني الدايم فرض بِرّه
+
+انا نفسي أتوه بلجّة الكتّاب
+ييمّمني القصيد و اكتفي شرّه
+
+الا يا سيّدة عشقي ( أما إيّاب )
+متى يسمح جفاك يبرّد الحَرّه
+
+اذا شوقي رعاك و كنتِ العرّاب
+فمن حقّه يعيشك لو مع سرّه
+
+ادوّر لك كثير و صبري الكذّاب
+ترك طعم الحياة و قهوتي مُرّه`},
+{t:"عزاء نفسي",d:"27/02/18",x:`عزّيت ذاتي وانا استقبل عزاء نفسي
+يا ثقْل الأيام و ماصعب ليلة البارح
+
+لا نفس طابت وانا المتذكّر المَنْسي
+وظنون فكري عكسها حالي السارح
+
+من صبح ربي ،، أربّي للمساء أُنسي
+ويزيد همي تراكم صبحي التارح
+
+متعوّد أحيا لبكره من أثر أمسي
+ب آمالي المفرطه في حلمي القارح
+
+حتّى استوى الضيق لا منه ذبل حسي
+مجموعة أحوال فيها الطابع الجارح
+
+يا ليت لو بس احفظ جزء من درسي
+وارحم عنا النفس واخفي همي الشارح
+
+ما كانت لليل صاحب يطربه يأسي
+ولا شفت شامت يهني خاطره فارح
+
+الشاهد اني انا استقبل عزاء نفسي
+و الشكر موصل لصعوبة مساء البارح`},
+{t:"تمام ....",d:"14/02/18",x:`بين رجوى رضاه و بين هيبة مقام
+وجه ضامي سرور و يسعد الآخرين
+
+ذاع صيته حزين وشاب داعي سلام
+طول ما هو يرتب مهجة المنهكين
+
+كف يمناه بيضاء ما لحقها ملام
+واكثر طعون ظهره شكر فعل اليمين
+
+حب يرسم سعادة في وجيه الأنام
+نام مشغول ذهن و قام جداً حزين
+
+لين حدّه شموخة يكتفي ب التمام
+في تساؤل فضولي يزعج الصابرين
+
+رغم حرصه يشتت حالة الإنهزام
+تفضحه عين ثكلا مفعمه بالحنين
+
+ملئها خيبة آماله !.. و نبذة حطام
+عن أماني نعتها ،،، وردة الياسمين
+
+والنهايه سؤاله !... يُوجب الإهتمام
+ليش حصد المواجع مهنة الطيبين`},
+{t:"هزمني كل حلم اجتحت بابه",d:"15/01/18",x:`عزيزي حظّي اللي عاث فِيني
+ترى ما عاد أكثر من الكآبه
+
+كفاك تكسّر الشوك بيديني
+( ألست من الذين لهم مهابه
+
+أغرّك أنني أقضي سنيني
+أُناجي ما رُزقت من الصبابة
+
+فأبكيني وأُسقطُ ملءَ عيني
+دموعاً لا تكلّ من الرتابه
+
+ويغشاني الشقاء ويصطفيني
+ظلاماً لا يُجافيني عذابه
+
+لعمرك و المأسي تعتريني
+عزيزاً في ثنا صدري رحابه
+
+أُقدم ما تجود به يميني
+وأُرشد من يتوه به صوابه)
+
+على مهلك وخلّك لا تجيني
+تعبت اشعر بجزء من الغرابه
+
+أدوّرني ؟!... وانا ضيّعت فَيني
+و اجاري لي أثر و أفقد سرابه
+
+مشيت ابعد من ابعد جيم سيني
+انا ليش افتقدني في غيابه ؟!
+
+وليش أقسى عليّ و اكتفيني
+محبّ أخشى من زيادة عتابه
+
+حبيبي كان باقي تسمعيني
+انا شكّلت رغباتي كتابه
+
+تبين توادعيني ؟!... وادعيني
+هزمني كل حلم إجتحت بابه
+
+مدام اللحين ادري وين ويني
+انا ذاك المتيم في مُصابه
+
+وخليني أعيشك نور عيني
+وحقي فيك دعوة مستجابه
+
+( سأرفعها إلي قاضي سنيني
+و أطوي العمر شوقاً للإنابه )`},
+{t:"ذاك عام وراح",d:"03/01/18",x:`ذاك عام وراح يالعام الجديد
+فيه خيبات الأمل ،،، متّابعه
+
+كثر ما جهزّت للصبح السعيد
+كثر ما أمست همومي خاشعه
+
+إبتديته فقد ،، وانهيته وحيد
+شبت فيه وكنت عَبْره جازعه
+
+كل يوم و أمنية أمسي تعيد
+نفس مأساتي و نفس الواقعه
+
+واستند كفّي ولي عزمٍ شديد
+يجبر أوجاعي و حلمي دافعه
+
+وابتديك بموجز الشخص العنيد
+فيه كِبر و عين ظلّه دامعه
+
+مبدأه إخلاص للعشق الفريد
+لين يُرفع للسماء السابعه
+
+ملّ عامي يفرض الحزن و يزيد
+وزدت صبر وزاد ضيق الواسعه
+
+ما يُلام القلب و الحب الأكيد
+رغم ضيمه ،،، فيه لذّه رائعه`},
+{t:"لـ الراحلة",d:"04/12/17",x:`ل الراحلة ؟! كيفك وانا فاقد سلام
+كيفك و انا قد كنت لك مفرد علم
+
+كيفك وكيف احلامك وعذر الخصام
+كيف الثواني ؟! (عمر) او عمري ندم
+
+يمكن حزينه بعد ذاك الإهتمام
+يمكن سعيده كثر ما فيني ألم
+
+يمكن تشوفين الندم مثل الحرام
+يمكن ندمتي بس هي عثرة قدم
+
+بين السؤال و حسرتي ماني أنام
+بيني وبينك صعب فعلاً ننظلم
+
+هو صدق ما قلتي من اشكال الغرام
+أو صدق اهديتي مشاعر من عدم
+
+يا مدّعين الحب عالدنيا السلام
+ابحرت فيه و مكسبي زفرة قلم
+
+أكّد بتوقيعه معي مسك الختام
+لازلت أحبه رغم ما فيني هدم`},
+{t:"راهنت بك",d:"18/10/17",x:`كبّرت في وجه التشاؤم واجحفت
+وأغليت في ذروة شعوري وعشتك
+
+راهنت بك كلّ الظروف وتحسفت
+لأنّي كثر ما قد حفظتك خسرتك
+
+من فرط حبّي و اهتمامي تكلفت
+في جلد ذاتي لين غصباً فرضتك
+
+مأوى ضجر جنّة حياتي ولا خفت
+أدمن هواك و اكتشفني فقدتك
+
+مدري خطاي اني اشوفك تعففت
+وارجع انمّي فيّ ،،، ما قد وهبتك
+
+والّا خطاك انك على مثلي اسرفت
+واعطيت بعضك لين كلّي عشقتك
+
+واهديتني يومك على ضيقي اشرفت
+نخبة جروح ،،، و زلزلتني ،،، و خفتك
+
+تايه أدوّر ( جِدّ ) ،،، في ماني اسلفت
+معقوله ؟! ابحث ارتواء ! و عطشتك
+
+غذيتني بك و اثمر الوقت ما شفت
+ساعي أمانك ، رغم جورك صبرتك
+
+يعني متى مليت من بعدك وعفت
+شفني هنا !.. يا صاحي ما كرهتك`},
+{t:"عن الـ ....",d:"01/10/17",x:`عن ال أشياء في صدرٍ حلم يدفاك
+عن ال رغبة و كلّ دعاي وال آمين
+
+عن ال أصداء : إنصاتي لقرع خطاك
+عن ال تصبير : أقول انك اكيد تجين
+
+عن ال وحده : ملاذ و عزلتي ترعاك
+عن ال قادم : رضاك وضحكتك واهلين
+
+عن ال إدراك اذا هو صح لي إدراك
+تعيشيني مثل ماني اعيش الحين
+
+مشتت ذهن واستطرد شذا ذكراك
+أقاوم مرّ ما أشعُر إلي ؟!... بعدين
+
+أمل يهدا صخبك و تنطلق يمناك
+وتتملّك جسد منهك ألم مسكين
+
+كفاك عناد !. ضيقي ما بعد كفاك
+او ستهواك تأسيد الوجع و البيْن
+
+او استولى عليك الحزن لين اشقاك
+خلاص اجحاف في حقك ولا تبطين`},
+{t:"ما بدينا",d:"13/08/17",x:`ما بدينا !.. كيف صرنا ننتهي
+باقي الأحلام ! في طور النمو
+
+توّك !... ،،، و تنزّهي
+كل ما فينا ،،، إلى أقصى علو
+
+توّي استجمع قواي ! واشتهي
+اطوي الغربة ، و أنعم ب الهدو
+
+كنتي العراب ، ل الحظ الزهي
+اضطهدتي وحدتي حب وسمو
+
+كيف تبغيني عن الشوق انتهي
+بعد ما لآن بوسط صدري قسو
+
+دنّقي ! وان جيت اعاتب موّهي
+قولي امزح لعن ابو ذاك العدو
+
+قولي انّك واهم !. و حلمك بهي
+قوم و اسجد في يقينك للسهو
+
+وان حصل ذمّي عاني و رفّهي
+زفرتي ناي ! و صباها بي غلو`},
+{t:"ساحل الذكرى",d:"10/08/17",x:`ساحل الذكرى بموج الشوق هاج
+واكتسح صفو الأمل حشد الهموم
+
+تمطر الفرقا !.. على دربي زجاج
+حافي الأقدام ، مدري كيف أقوم
+
+كيف أجاهد في مدى ثائر عجاج
+لا رجوع ،،، و لا بوادر !... للقدوم
+
+من يميني ؟!. فلسفة حلم إندماج
+خانه التصبير ! و اثنته الغموم
+
+فكرة الغربة !.. نقيض ! الإحتياج
+واحتياجي يفرض الخاطر يصوم
+
+بعتكف لك في رجاء نور السراج
+يحيي أنفاسي و افراحي تدوم
+
+دثريني !... رجفتي فقد ! إبتهاج
+زمليني !... بك أنا ال أقوى عزوم
+
+أسألي ؟!.. من باب تحفيز المزاج
+مدمنك !... ما ملّ ! تعداد النجوم
+
+عتّقيني !... انتظار !... الإنفراج
+لين أباهي بك ! قهر كل الخصوم
+
+وان كفرتيني فلا ابغالي علاج
+ما ب ألومك !.. بس ل غْلوّي ألوم`},
+{t:"تباشير الفرح",d:"30/07/17",x:`روّضيني !. يا تباشير الفرح
+من زمان و عادتي منّه جفول
+
+علّمي نفي !. الجوار ل الترح
+وازرعي للأُنس في ذاتي قبول
+
+ورّدي سود اليالي ،، ب المرح
+اقهريها! كم سئمت من الذبول
+
+كثر ما في صدري الهم استرح
+فجّريني طفل ،، في قمّة ذهول
+
+ما يخاف من العواقب لا سرح
+كلّ همّه ،، كيف ضحكاته تطول
+
+اكبر اوجاعه اذا هو ؟!. انجرح
+خدش في حينه من المتعه يزول
+
+و ان يحب و يستحي لا ينشرح
+بس ، يتصدّد ،، عن الكل و يقول
+
+ما احب !... و لا بعد بالي سرح
+ويتعلثم خوف من بعض الفضول
+
+يا سعادة ( ضيق ) ما عمره برح
+لو سمحت تقوم حلمي في وصول
+
+وب اختصار الشعر لا منّه قرح
+خلّ يبحر في سما كل الفصول`},
+{t:"يجوز أكذب",d:"26/07/17",x:`يجوز اكذب ؟ سؤال اطماع ضيق انسان
+حفظ منهج ... حرام ،،، متشدّد
+
+وُلد شاعر !... برع ،، في حبكة الأشجان
+صديق إلهام ،،، جزله
+
+رغب ... يجتاز ه الدنيا ،،، كما لو كان
+على الفطره ،، ( بسيط ب طُهر يتجدّد )
+
+قدره انّه !... غزا بوحه !... عظيم احزان
+كثير اوجاع ،،، يفضحها !.. بدّد
+
+ورقه ،،، وْ يزْحم حروفه ،،،
+و ليل !... و هاجس !... و توقيع متردّد
+
+إلين الآن !... ما يملك سوى ... خذلان
+افا !... ي احلام راهن بك ،،، و بك ندّد
+
+غريب اطوار ،،، ( اثبت ) للحزن ادمان
+سأله !... البعض يتنازل !... و يتودّد
+
+فقد حتّى القبول ،،، و نظرة استحسان
+وصاغ الحال !... مثل الحظ ( ما شدّد )
+
+اكيد اسأل ؟! من الضيقه ب استهجان
+يجوز اكذب ؟!.. و اكون انسان متعدد`},
+{t:"الرضى ،،،",d:"12/07/17",x:`ما طلبت من الرضى ،، غيرك أنا
+ولا بحثت إرضاء من حاول يغيب
+
+ايه ،،، قلبي ، في رجا حبك ! دنا
+و انثنت لك ب الرضى قامة أديب
+
+يا اميرة حسن ؟!... مجنونك جنا
+من عزوفك لا يمكن يطيب
+
+عاتبيني !... دامك بقلبي ،،، هِنا
+حمليني !... للخطاء لوني مصيب
+
+للغياب أسباب ،،، وان هو ، حدّنا
+شف ظروفك ! بعض اوقاتك تغيب
+
+و ألتمس لك عذر !.. و أحيابك غنا
+لين صمتك اربك الشخص المُريب
+
+مثلك ؟! اوجاعي ،،، تعكر لي هَنا
+بس احبك واخفي الشيء العجيب
+
+صارحيني !.. وش مسبب لك عنا
+وابشري بي طيب لا يمكن يخيب`},
+{t:"ما قبل أحبك",d:"20/06/17",x:`ما قبل أحبك ! و أما بعد ،، لا تُذكر
+إرهاب حظ ، و شناعة واقع اتعبني
+
+راجعت دفتر حياتي ، علّني اضمر
+رجفة مشاعر و غصة شعر عذبني
+
+حصّلت حزني يقيناً كان بي اجدر
+من مولدي بؤس طول العمر يصحبني
+
+ف اوكلت شعري مهمّة حلمي الأكبر
+يمكن يكون الأمل ترجع تطببني
+
+ما قبل أحبك ! انا و ب عزلتي ابحر
+في معمعة فكر شرق بي و غربني
+
+اكذب عليّه ، واقول ان البشر اطهر
+من كل قصة جشع والصدق كذبني
+
+ان جيت بالطيب كانوا امكر و احقر
+وان شحت عنهم حكاوي الظهر تحطبني
+
+شافوا بلؤم النفوس اني كذا اخطر
+لاني بعيد الطموح و صعب تغلبني
+
+واخترت هجر الأوادم قبل لا تظهر
+مستأثر النفس دام الطيب أدبني
+
+وأثنا أحبك ؟! انا ذاك اللذي يكفر
+بالبعد و الهجر و التفريق يرعبني
+
+غيّرت نظرة قنوط و صرت بك افخر
+متوهّج الوجه فيني أُنس هذبني
+
+لحظات كانت من اجمل ما انا اذكر
+فيها تفاؤل و رغبة شيء يجذبني
+
+حقّقت كل امنياتك ،،، قدّ ،،، ما اقدر
+واهملت بعض امنياتي خوف ترهبني
+
+ومن بعد حبّك وجودي صار لل منظر
+هيئة جسد بس جمر الشوق يلهبني
+
+لا روح فيني و لاني مثل ما تخبر
+اسواء من اول ولا به شيء يطربني
+
+ما قبل احبك و اما بعد ... ما تُذكر
+لا عزلتي حلّ وانت الحلّ ؟!.. طببني`},
+{t:"شفتك بخير",d:"31/05/17",x:`شفتك بخير ،،، و بدّد الله ،،، همّي
+وارتحت في كسرك سكونك وتمتمت
+
+ياهو لضى ، رابض على كبر غمّي
+لكن ؟!... وربّك من ظهرتي تبسمت
+
+اشتقت و احمل لك انا شوق جمّي
+ما يشبعك ! حتّى و لو جيت سلمت
+
+يستنصرك ،، تذكار من زود ضمّي
+واستنصره تذكار من زود ما همت
+
+ما تدري إنك ؟!.. داخل عروق دمّي
+لو ما نبض بك خافقي !.. ما تكلمت
+
+استنزفك ،، في كلّ لحظة ،، وانمّي
+عهد ال وفا ،،، يا اجمل اللي تعلمت
+
+كوني ؟! لي إنصاف المواجع و لمّي
+حسرة ليالي !!.. عشتها ما تأزمت
+
+تمّي ،،، على جهرك سكونك و تمّي
+اصدق ! مشاعر شاعرك وان تألمت`}
+];
+const ML=m=>{const[y,o]=m.split('-').map(Number);return new Intl.DateTimeFormat('ar-SA-u-nu-latn-ca-gregory',{month:'long',year:'numeric'}).format(new Date(y,o-1,1))};
+const st=document.getElementById('stage'),bu=document.getElementById('burger'),me=document.getElementById('menu'),pn=document.getElementById('panel');
+const pmM=document.getElementById('pmMonth'),pmT=document.getElementById('pmTitle'),pmB=document.getElementById('pmBody');
+const pmNew=document.getElementById('pmNew'),pmOld=document.getElementById('pmOld');
+function set(o){st.classList.toggle('is-open',o);bu.setAttribute('aria-expanded',o);me.setAttribute('aria-hidden',!o);bu.setAttribute('aria-label',o?'إغلاق':'القائمة')}
+function setP(o){st.classList.toggle('is-poem',o);pn.setAttribute('aria-hidden',!o);if(o){set(false);pn.scrollTop=0}}
+let cur=0;
+function showPoem(i){cur=i;const p=POEMS[i];
+pmM.textContent=(p.m?'قصيدة شهر '+ML(p.m)+' · ':'')+p.d;
+pmT.textContent=p.t;pmB.innerHTML='';
+p.x.trim().split(/\n\s*\n/).forEach(b=>{const d=document.createElement('div');d.className='pm-st';b.split('\n').forEach(l=>{const x=document.createElement('span');x.textContent=l.trim();d.appendChild(x)});pmB.appendChild(d)});
+pmNew.disabled=i===0;pmOld.disabled=i===POEMS.length-1}
+function openPoem(i){showPoem(i);setP(true)}
+const feat=POEMS.findIndex(p=>p.m);
+document.getElementById('poems').innerHTML=(feat>=0?`<li style="transition-delay:.03s"><a href="#" data-i="${feat}"><span>قصيدة الشهر</span><em>${ML(POEMS[feat].m)}</em></a></li>`:'')+POEMS.map((p,i)=>`<li style="transition-delay:${.06+i*.03}s"><a href="#" data-i="${i}"><span>${p.t}</span><em>${p.d}</em></a></li>`).join('');
+document.getElementById('strip').innerHTML=POEMS.slice(0,4).map((p,i)=>`<a class="lg lg${i+1}" href="#" data-i="${i}"><i></i>${p.t}</a>`).join('');
+document.querySelectorAll('[data-i]').forEach(a=>a.onclick=e=>{e.preventDefault();set(false);openPoem(+a.dataset.i)});
+document.querySelectorAll('[data-poem]').forEach(a=>a.onclick=e=>{e.preventDefault();set(false);openPoem(feat>=0?feat:0)});
+bu.onclick=()=>set(!st.classList.contains('is-open'));
+document.getElementById('close').onclick=()=>{set(false);setP(false)};
+pmNew.onclick=()=>{if(cur>0){showPoem(cur-1);pn.scrollTop=0}};
+pmOld.onclick=()=>{if(cur<POEMS.length-1){showPoem(cur+1);pn.scrollTop=0}};
+document.getElementById('pmAll').onclick=()=>{setP(false);set(true)};
+document.querySelectorAll('[data-open]').forEach(a=>a.onclick=e=>{e.preventDefault();setP(false);set(true)});
+addEventListener('keydown',e=>e.key==='Escape'&&(set(false),setP(false)));
+showPoem(feat>=0?feat:0);
+</script>
+</body>
+</html>
